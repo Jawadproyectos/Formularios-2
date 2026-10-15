@@ -11,7 +11,7 @@
     </style>
 </head>
 <body>
-    <h1>Formulario</h1>
+    <h1>Tipos de Input</h1>
     <form action="procesa.php" method="post">
     <fieldset>
         <legend>Datos personales</legend>
@@ -30,13 +30,76 @@
 <input id="contraseña" type="password"  maxlength="8"
     name="Contraseña">
    </label> </p>
-    <p>  
-        <label>Sexo:
-<input type="radio" name="Sexo" value="H" checked>Hombre
-<input type="radio" name="Sexo" value="M">Mujer
+    <p> 
+        
+            
+        <label for="Hombre">Hombre</label>
+<input type="radio" id="Hombre" name="genero" value="H"  checked>
+<label for="Mujer">Mujer</label>
+<input type="radio" id="mujer" name="genero" value="M">
   
-</label> </p>
-    </fieldset> <input type="submit" value="Enviar">
+ </p>
+ 
+ <p>
+     <label for="Fumador">Fumador:</label>
+    <input type="checkbox" name="fuma" 
+    id="Fumador">
+ </p>
+    </fieldset>
+    <p>
+         <label for="prov">Provincia:</label>
+        <select name="prov" id="prov">
+            <option value="cr">Ciudad Real</option>
+            <option value="ab">Albacete</option>
+            <option value="cu">Cuenca</option>
+            <option value="gu">Guadalajara</option>
+            <option value="to">Toledo</option>
+
+
+
+        </select>
+    <p>
+        <label for="obs">Observaciones:</label>
+        <textarea name="obs"
+        cols="10" rows="6"
+        id="obs">
+        Escriba algo...
+        </textarea>
+
+    </p>
+    <p>
+        <label for="color">Color:</label>
+        <input type="color" name="color"
+        id="color">
+    </p>
+      <p>
+        <label for="fecha-nac">Fecha de Nacimiento:</label>
+        <input type="date" name="fecha-nac"
+        id="fecha-nac">
+    </p>
+    <p>
+        <label for="edad">Edad:</label>
+        <input type="number" name="edad"
+        id="edad" min="0" max="100">
+    </p>
+    <p>
+        <label for="email">Email:</label>
+        <input type="email" name="email"
+        id="email">
+    </p>
+    <p>
+        <label for="foto">Adjuntar Foto:</label>
+        <input type="file" name="foto"
+        id="foto">
+    </p>
+
+    </p>
+    <!-- Botones de envio y reset -->
+    <p>
+
+     <input type="submit" value="Enviar">
+     <input type="reset" value="Restablecer">
+    </p>
 </form>
 </body>
 </html>
